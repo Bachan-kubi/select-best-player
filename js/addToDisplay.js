@@ -15,7 +15,7 @@ function showSeletedPlayer(player){
 
         //warning message for selecting more than 5 players!
         if(tableBody.childElementCount>4){
-            alert('cant select more than 5 players!');
+            alert('this is the last selection! Dont select more than 5!');
             return; 
         }
 
