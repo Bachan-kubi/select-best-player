@@ -4,7 +4,6 @@ function showSeletedPlayer(player){
     
     const tableBody = document.getElementById('player-list');
     tableBody.innerHTML = '';
-    
     for(i=0; i<player.length; i++){        
         const playerName = player[i];       
         // create tr and dispaly on table body
@@ -13,6 +12,13 @@ function showSeletedPlayer(player){
         <td>${i+1}</td>
         <td>${playerName}</td>`;
         tableBody.appendChild(tr); 
+
+        //warning message for selecting more than 5 players!
+        if(tableBody.childElementCount>4){
+            alert('cant select more than 5 players!');
+            return; 
+        }
+
     }
 }
 function addToCart(element){
@@ -25,4 +31,6 @@ function addToCart(element){
     element.disabled = true;
     // show selected player number
     document.getElementById('player-number').innerText = playerArr.length;
+    
+    
 }
