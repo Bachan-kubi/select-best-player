@@ -5,6 +5,11 @@ function calculateExpense(){
     playerList.innerText = playerArr.length;
     const totalExpenses = expenses * playerList;
     
+    // validation
+    if(isNaN(expenses)||expenses<0){
+        alert('Enter Valid input!');
+        return; 
+    }
     // show in expenses text field; 
     setValuesById('player-expenses', totalExpenses);
 }
@@ -15,6 +20,12 @@ function totalExpensesCalculation(){
     const managersCost = getElementValueById('manager-cost');
     const coacherCost = getElementValueById('coacher-cost');
     
+    // validation 
+    if(isNaN(managersCost)|| managersCost<0 || isNaN(coacherCost)|| coacherCost<0){
+        alert('Not a valid input');
+        return;
+    }
+
     // calculate total cost
     const totalCost = playerExpenses+managersCost+coacherCost;
 
@@ -29,4 +40,4 @@ document.getElementById('calculate-expenses').addEventListener('click', function
 // for total calculator 
 document.getElementById('btn-total').addEventListener('click', function(){
     totalExpensesCalculation();
-})
+});
