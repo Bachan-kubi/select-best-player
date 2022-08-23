@@ -12,7 +12,7 @@ function showSeletedPlayer(player){
         <td>${i+1}</td>
         <td>${playerName}</td>`;
         tableBody.appendChild(tr); 
-
+        
         //warning message for selecting more than 5 players!
         if(tableBody.childElementCount>4){
             alert('this is the last selection! Dont select more than 5!');

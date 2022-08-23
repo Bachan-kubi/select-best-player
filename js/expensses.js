@@ -21,12 +21,12 @@ function totalExpensesCalculation(){
     // set total cost to targeted field. 
     setValuesById('total-mgt-cost', totalCost);
 }
-
+// for calculating player expenses
 document.getElementById('calculate-expenses').addEventListener('click', function(){
     calculateExpense();
 
 });
-
+// for total calculator 
 document.getElementById('btn-total').addEventListener('click', function(){
     totalExpensesCalculation();
 })
