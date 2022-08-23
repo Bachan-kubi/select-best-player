@@ -30,7 +30,5 @@ function addToCart(element){
     // disable button after click
     element.disabled = true;
     // show selected player number
-    document.getElementById('player-number').innerText = playerArr.length;
-    
-    
+    document.getElementById('player-number').innerText = playerArr.length;    
 }
